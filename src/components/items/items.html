@@ -1,0 +1,12 @@
+<!-- Generated template for the ItemsComponent component -->
+<div>
+  {{text}}
+</div>
+<ion-list  *ngIf="items.results.length > 0">
+ <ion-item *ngFor="let item of items.results">
+ <item [item]="item | async"></item>
+ </ion-item>
+</ion-list>
+<p *ngIf="items.results.length === 0">
+ No items.
+</p>
